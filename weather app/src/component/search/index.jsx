@@ -1,9 +1,16 @@
 
-export default function Search()
+export default function Search({search , setSearch , handleSearch})
 {
     return (
         <div>
-            Search
+            <input
+              type = "text"
+              placeholder="Enter City Name"
+              name="search"
+              value ={search}
+              onChange={(event) => setSearch(event.target.value)}            
+            />
+            <button onClick={handleSearch} >Search Weather</button>
         </div>
     )
 }
