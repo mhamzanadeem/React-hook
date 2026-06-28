@@ -1,9 +1,7 @@
 import data from '../../../data/data.js'
 import { useState } from 'react'
 
-
 export default function Accordian() {
-
     const [selected, setSelected] = useState(null);
     const [enablemultipleselection, setenablemultipleselection] = useState(false)
     const [multiple, setmultiple] = useState([])
@@ -28,32 +26,43 @@ export default function Accordian() {
 
     }
     return (
-        <>
-            <div>
-                <button onClick={() => setenablemultipleselection(!enablemultipleselection)}>Enable Multi Selection</button>
+        <div className='accordion-shell'>
+            <h1 className='accordion-heading'>Accordion Demo</h1>
+
+            <button
+                className='toggle-button'
+                onClick={() => setenablemultipleselection(!enablemultipleselection)}
+            >
+                {enablemultipleselection ? 'Disable Multi Selection' : 'Enable Multi Selection'}
+            </button>
+
+            <div className='accordion-wrap'>
                 {data && data.length > 0 ? (
                     data.map((item) => (
-                        <div>
-                            <div onClick={enablemultipleselection ? () => multipleselection(item.id) : () => singleSelectionHandler(item.id)}>
+                        <div className='accordion-item' key={item.id}>
+                            <div
+                                className='accordion-title'
+                                onClick={enablemultipleselection ? () => multipleselection(item.id) : () => singleSelectionHandler(item.id)}
+                            >
                                 <div>
                                     <h3>{item.question}</h3>
                                 </div>
-
+                                <span className='accordion-icon'>+</span>
                             </div>
                             {
                                 enablemultipleselection ?
                                     multiple.indexOf(item.id) !== -1 && (
-                                        <div>{item.answer}</div>)
+                                        <div className='accordion-content'>{item.answer}</div>)
                                     :
                                     selected === item.id && (
-                                        <div>{item.answer}</div>)
+                                        <div className='accordion-content'>{item.answer}</div>)
                             }
                         </div>
                     ))
                 ) : (
-                    <div>No Data Found</div>
+                    <div className='no-data'>No Data Found</div>
                 )}
             </div>
-        </>
+        </div>
     );
 } 
