@@ -4,6 +4,18 @@ A collection of small React + Vite projects built to practice React fundamentals
 
 Each folder is an independent app with its own `package.json`, dependencies, Vite config, and source files. You can install and run any project separately.
 
+---
+## 🚀 Live Demos
+
+> Deployed on **Vercel** — click any badge to open the live app instantly.
+
+| &nbsp; | Project | Stack | Live |
+| :---: | --- | --- | :---: |
+| 🌤️ | **Weather App** | React · OpenWeather API | [![Live Demo](https://img.shields.io/badge/View%20Demo-Weather%20App-4f86f7?style=for-the-badge&logo=vercel&logoColor=white)](https://react-hook-9nbrv8gv6-mhamzanadeems-projects.vercel.app/) |
+| 🍽️ | **Food Recipe App** | React · Forkify API · React Router | [![Live Demo](https://img.shields.io/badge/View%20Demo-Food%20Recipe-f97316?style=for-the-badge&logo=vercel&logoColor=white)](https://react-hook-ay6g-am0nh029a-mhamzanadeems-projects.vercel.app/) |
+
+---
+
 ## Projects
 
 | Project | Folder | Description |
