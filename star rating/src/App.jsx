@@ -1,17 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
+import StarRating from './components/star-rating'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <StarRating noOfStars={10} />
-
-    </>
+    <div className="min-h-screen bg-[#131619] text-[#FFFFFF]">
+      <main className="mx-auto flex min-h-screen w-full max-w-5xl items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
+        <StarRating noOfStars={10} />
+      </main>
+    </div>
   )
 }
 

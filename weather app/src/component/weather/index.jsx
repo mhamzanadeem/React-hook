@@ -3,7 +3,6 @@ import { useState } from "react"
 import Search from "../search";
 
 
-const API_KEY = ""
 
 export default function Weather() {
 
